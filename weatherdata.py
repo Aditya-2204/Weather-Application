@@ -9,13 +9,9 @@ import datetime as dt
 import tkinter as tk
 from pprint import pprint
 
-owm = pyowm.OWM("a4aa5e3d83ffefaba8c00284de6ef7c3")
+owm = pyowm.OWM("--Your API Key--")
 
 wmgr = owm.weather_manager()
-airmgr = owm.airpollution_manager
-uvmgr = owm.uvindex_manager
-
-print(airmgr)
 
 wobs = wmgr.weather_at_place("Carindale")
 w = wobs.weather
